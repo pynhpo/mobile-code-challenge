@@ -11,18 +11,19 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6A0E918026D9ED6E00EFE3C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A0E917F26D9ED6E00EFE3C8 /* GoogleService-Info.plist */; };
-		6B56C299E188DFB181884A91 /* libPods-aspire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124601B24FB4240D7A300348 /* libPods-aspire.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F50C0BD7C523F949BAE4D832 /* libPods-aspire-aspireTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FD95ADBB3A9ED4CFF1B5DB /* libPods-aspire-aspireTests.a */; };
-		78BB8663AFBA4BC0975F5F52 /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B65D9EC5147A89AA5C579 /* AvenirNextLTPro-Bold.otf */; };
-		AFF1756E39F64AF9B9C8DB0B /* AvenirNextLTPro-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE609B7A74364E0FA3891C6D /* AvenirNextLTPro-Demi.otf */; };
-		75A34494BBE949D3BB00EECA /* AvenirNextLTPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC0B8CD0C5C74A9A83C9EFCC /* AvenirNextLTPro-Medium.otf */; };
-		AC7DD128ADD6493F9A368496 /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2B25E1AFF44244F9AA505CDE /* AvenirNextLTPro-Regular.otf */; };
-		DEB42437E004420AB0EA1835 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B778DD52825F412CAC65BFF1 /* SFProText-Bold.otf */; };
-		8E172619FFA24322B314CDE2 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2651D514AD8346E29EC221E7 /* SFProText-Medium.otf */; };
 		368C69BE0CCD43E0AAFD8588 /* SFProText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B3093AB2A314A4599150574 /* SFProText-Regular.otf */; };
+		6A0E918026D9ED6E00EFE3C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A0E917F26D9ED6E00EFE3C8 /* GoogleService-Info.plist */; };
+		6A7631C726DA14CF0066BD97 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7631C626DA14CE0066BD97 /* BootSplash.storyboard */; };
+		6B56C299E188DFB181884A91 /* libPods-aspire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124601B24FB4240D7A300348 /* libPods-aspire.a */; };
+		75A34494BBE949D3BB00EECA /* AvenirNextLTPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC0B8CD0C5C74A9A83C9EFCC /* AvenirNextLTPro-Medium.otf */; };
+		78BB8663AFBA4BC0975F5F52 /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B65D9EC5147A89AA5C579 /* AvenirNextLTPro-Bold.otf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8E172619FFA24322B314CDE2 /* SFProText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2651D514AD8346E29EC221E7 /* SFProText-Medium.otf */; };
+		AC7DD128ADD6493F9A368496 /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2B25E1AFF44244F9AA505CDE /* AvenirNextLTPro-Regular.otf */; };
+		AFF1756E39F64AF9B9C8DB0B /* AvenirNextLTPro-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE609B7A74364E0FA3891C6D /* AvenirNextLTPro-Demi.otf */; };
+		DEB42437E004420AB0EA1835 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B778DD52825F412CAC65BFF1 /* SFProText-Bold.otf */; };
 		E207F4BE72CF44D2BC50510A /* SFProText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F4B8006322646509457FE12 /* SFProText-Semibold.otf */; };
+		F50C0BD7C523F949BAE4D832 /* libPods-aspire-aspireTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FD95ADBB3A9ED4CFF1B5DB /* libPods-aspire-aspireTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,21 +48,22 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = aspire/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = aspire/main.m; sourceTree = "<group>"; };
 		18DB6384E6432A7793FB0924 /* Pods-aspire-aspireTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aspire-aspireTests.release.xcconfig"; path = "Target Support Files/Pods-aspire-aspireTests/Pods-aspire-aspireTests.release.xcconfig"; sourceTree = "<group>"; };
+		2651D514AD8346E29EC221E7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Medium.otf"; path = "../src/assets/fonts/SFProText-Medium.otf"; sourceTree = "<group>"; };
+		2B25E1AFF44244F9AA505CDE /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirNextLTPro-Regular.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		3352B5C9857CE6B1FCD4062C /* Pods-aspire-aspireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aspire-aspireTests.debug.xcconfig"; path = "Target Support Files/Pods-aspire-aspireTests/Pods-aspire-aspireTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B3093AB2A314A4599150574 /* SFProText-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Regular.otf"; path = "../src/assets/fonts/SFProText-Regular.otf"; sourceTree = "<group>"; };
 		56FD95ADBB3A9ED4CFF1B5DB /* libPods-aspire-aspireTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aspire-aspireTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0E917F26D9ED6E00EFE3C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A7631C626DA14CE0066BD97 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = aspire/BootSplash.storyboard; sourceTree = "<group>"; };
+		6F2B65D9EC5147A89AA5C579 /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirNextLTPro-Bold.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = aspire/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F4B8006322646509457FE12 /* SFProText-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Semibold.otf"; path = "../src/assets/fonts/SFProText-Semibold.otf"; sourceTree = "<group>"; };
 		944843321057C7BE9D96C178 /* Pods-aspire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aspire.debug.xcconfig"; path = "Target Support Files/Pods-aspire/Pods-aspire.debug.xcconfig"; sourceTree = "<group>"; };
+		B778DD52825F412CAC65BFF1 /* SFProText-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Bold.otf"; path = "../src/assets/fonts/SFProText-Bold.otf"; sourceTree = "<group>"; };
 		BC900EE37A00549F0DB7648A /* Pods-aspire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aspire.release.xcconfig"; path = "Target Support Files/Pods-aspire/Pods-aspire.release.xcconfig"; sourceTree = "<group>"; };
+		CE609B7A74364E0FA3891C6D /* AvenirNextLTPro-Demi.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirNextLTPro-Demi.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Demi.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		6F2B65D9EC5147A89AA5C579 /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; name = "AvenirNextLTPro-Bold.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CE609B7A74364E0FA3891C6D /* AvenirNextLTPro-Demi.otf */ = {isa = PBXFileReference; name = "AvenirNextLTPro-Demi.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Demi.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FC0B8CD0C5C74A9A83C9EFCC /* AvenirNextLTPro-Medium.otf */ = {isa = PBXFileReference; name = "AvenirNextLTPro-Medium.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2B25E1AFF44244F9AA505CDE /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; name = "AvenirNextLTPro-Regular.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B778DD52825F412CAC65BFF1 /* SFProText-Bold.otf */ = {isa = PBXFileReference; name = "SFProText-Bold.otf"; path = "../src/assets/fonts/SFProText-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2651D514AD8346E29EC221E7 /* SFProText-Medium.otf */ = {isa = PBXFileReference; name = "SFProText-Medium.otf"; path = "../src/assets/fonts/SFProText-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3B3093AB2A314A4599150574 /* SFProText-Regular.otf */ = {isa = PBXFileReference; name = "SFProText-Regular.otf"; path = "../src/assets/fonts/SFProText-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8F4B8006322646509457FE12 /* SFProText-Semibold.otf */ = {isa = PBXFileReference; name = "SFProText-Semibold.otf"; path = "../src/assets/fonts/SFProText-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FC0B8CD0C5C74A9A83C9EFCC /* AvenirNextLTPro-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirNextLTPro-Medium.otf"; path = "../src/assets/fonts/AvenirNextLTPro-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				6A7631C626DA14CE0066BD97 /* BootSplash.storyboard */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -169,7 +172,7 @@
 			sourceTree = "<group>";
 		};
 		CC5C975817A14704BF6E63A3 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				6F2B65D9EC5147A89AA5C579 /* AvenirNextLTPro-Bold.otf */,
 				CE609B7A74364E0FA3891C6D /* AvenirNextLTPro-Demi.otf */,
@@ -182,7 +185,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -283,6 +285,7 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6A0E918026D9ED6E00EFE3C8 /* GoogleService-Info.plist in Resources */,
+				6A7631C726DA14CF0066BD97 /* BootSplash.storyboard in Resources */,
 				78BB8663AFBA4BC0975F5F52 /* AvenirNextLTPro-Bold.otf in Resources */,
 				AFF1756E39F64AF9B9C8DB0B /* AvenirNextLTPro-Demi.otf in Resources */,
 				75A34494BBE949D3BB00EECA /* AvenirNextLTPro-Medium.otf in Resources */,
