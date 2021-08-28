@@ -9,6 +9,18 @@
     "test": "jest",
     "lint": "eslint ."
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "organize-imports-cli",
+      "./node_modules/.bin/eslint --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.7",
     "@react-native-community/masked-view": "^0.1.11",
