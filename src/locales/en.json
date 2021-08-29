@@ -1,0 +1,16 @@
+{
+  "global": {},
+  "infos": {},
+  "warnings": {},
+  "errors": {
+    "no_content": "No content!",
+    "normal_notice": "Error! Please try later!"
+  },
+  "screens": {
+    "sign_in": {
+      "login_success": "Login successfully",
+      "login_failed": "Login failed"
+    }
+  },
+  "components": {}
+}
