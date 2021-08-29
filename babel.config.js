@@ -18,6 +18,8 @@ module.exports = {
           '@navigation': './src/navigation',
           '@redux': './src/redux',
           '@constants': './src/constants',
+          '@modals': './src/modals',
+          '@theme': './src/theme',
         },
       },
     ],

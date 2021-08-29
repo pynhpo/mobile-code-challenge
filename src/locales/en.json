@@ -12,5 +12,13 @@
       "login_failed": "Login failed"
     }
   },
-  "components": {}
+  "components": {
+    "main_tab": {
+      "home": "Home",
+      "debit_card": "DebitCard",
+      "payments": "Payments",
+      "credit": "Credit",
+      "profile": "Profile"
+    }
+  }
 }

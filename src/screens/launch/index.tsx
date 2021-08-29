@@ -1,3 +1,4 @@
+import { View } from 'react-native';
 import { signOutAction, fetchMeAction } from '@redux/auth/action';
 import { AppStorage } from '@services/app-storage.service';
 import React, { useEffect } from 'react';
@@ -5,7 +6,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import { useDispatch } from 'react-redux';
 import { NavigationService } from '@services/navigation.service';
 
-export const LaunchScreen = (): React.ReactNode => {
+export const LaunchScreen = (): React.ReactElement => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,7 +18,8 @@ export const LaunchScreen = (): React.ReactNode => {
           await NavigationService.reset('MainTab');
         } else {
           RNBootSplash.hide({ fade: true });
-          await NavigationService.reset('SignIn');
+          await NavigationService.reset('MainTab');
+          // await NavigationService.reset('SignIn');
         }
       })
       .catch(async () => {
@@ -25,5 +27,5 @@ export const LaunchScreen = (): React.ReactNode => {
         await dispatch(signOutAction());
       });
   }, []);
-  return null;
+  return <View />;
 };

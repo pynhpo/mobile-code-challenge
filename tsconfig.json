@@ -24,7 +24,9 @@
       "@services/*": ["src/services/*"],
       "@navigation/*": ["src/navigation/*"],
       "@redux/*": ["src/redux/*"],
-      "@constants/*": ["src/constants/*"]
+      "@constants/*": ["src/constants/*"],
+      "@modals/*": ["src/modals/*"],
+      "@theme/*": ["src/theme/*"]
     }
   },
   "exclude": [

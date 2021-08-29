@@ -1,28 +1,20 @@
-import { authReducer, AuthStateType } from '@redux/auth/reducer';
-import { loadingReducer, LoadingStateType } from '@redux/loading/reducer';
-import { modalReducer, ModalStateType } from '@redux/modal/reducer';
-import { paymentReducer, PaymentStateType } from '@redux/payment/reducer';
-import {
-  purchaseOrderReducer,
-  PurchaseOrderStateType,
-} from '@redux/purchase-order/reducer';
-// import { rootReducer, RootStateType } from '@redux/root/reducer';
-import { combineReducers } from 'redux';
+import { authReducer } from '@redux/auth/reducer';
+import { AuthStateType, initialAuthState } from '@redux/auth/constants';
+import { modalReducer } from '@redux/modal/reducer';
+import { ModalStateType, initialModalState } from '@redux/modal/constants';
+import { combineReducers, CombinedState } from 'redux';
 
-export type CombinedStateType = {
-  // root: RootStateType;
+export type CombinedStateType = CombinedState<{
   auth: AuthStateType;
   modal: ModalStateType;
-  loading: LoadingStateType;
-  payment: PaymentStateType;
-  purchaseOrder: PurchaseOrderStateType;
+}>;
+
+export const initialState: CombinedStateType = {
+  auth: initialAuthState,
+  modal: initialModalState,
 };
 
 export default combineReducers({
-  // root: rootReducer,
   auth: authReducer,
   modal: modalReducer,
-  loading: loadingReducer,
-  payment: paymentReducer,
-  purchaseOrder: purchaseOrderReducer,
 });

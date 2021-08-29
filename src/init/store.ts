@@ -1,42 +1,32 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import dynostore, { dynamicReducers } from '@redux-dynostore/core';
-import { dynamicSagas } from '@redux-dynostore/redux-saga';
 import { authSaga } from '@redux/auth/saga';
-import { purchaseOrderSaga } from '@redux/purchase-order/saga';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
-import { persistReducer, persistStore } from 'redux-persist';
+import { persistReducer, persistStore, PersistConfig } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
-import Offline from './offline';
-import Reducer from './reducer';
+import rootReducer, { CombinedStateType, initialState } from './reducer';
 import Saga from './saga';
 
 const middleware = __DEV__
-  ? applyMiddleware(Saga, Offline.offlineMiddleware, createLogger())
-  : applyMiddleware(Saga, Offline.offlineMiddleware);
-const enhancer = [
-  middleware,
-  dynostore(dynamicReducers(), dynamicSagas(Saga)),
-  Offline.enhanceStore,
-];
+  ? applyMiddleware(Saga, createLogger())
+  : applyMiddleware(Saga);
 
-const persistConfig = {
+const persistConfig: PersistConfig<CombinedStateType> = {
   key: 'root',
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2,
-  whitelist: ['payment', 'auth'],
+  whitelist: ['auth'],
   // timeout: 0, // The code base checks for falsy, so 0 disables
 };
 
-const persistedReducer = persistReducer(
+const persistedReducer = persistReducer<CombinedStateType>(
   persistConfig,
-  Offline.enhanceReducer(Reducer),
+  rootReducer,
 );
 
-const store = createStore(persistedReducer, {}, compose(...enhancer));
+const store = createStore(persistedReducer, initialState, compose(middleware));
 
 Saga.run(authSaga);
-Saga.run(purchaseOrderSaga);
 
 export const persistor = persistStore(store);
 
