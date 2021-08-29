@@ -3,6 +3,7 @@ export const colors = {
   secondary: '#0C365A',
   inactiveTab: '#DDDDDD',
   lightGray: '#DCDCDC',
+  disabledButton: '#EEEEEE',
   gray: 'gray',
   red: 'red',
   black: 'black',
@@ -11,4 +12,5 @@ export const colors = {
   transparent: 'transparent',
   lightBlue: 'lightblue',
   lightGreen: 'lightgreen',
+  inputTextColor: '#222222',
 };

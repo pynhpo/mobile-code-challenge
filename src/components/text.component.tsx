@@ -9,6 +9,7 @@ interface CategoryStyleType {
     | 'h1'
     | 'h2'
     | 'h3'
+    | 'h4'
     | 'label1'
     | 'label2'
     | 'p1'
@@ -35,6 +36,8 @@ const getTextCategoryStyle = ({ category }: Required<CategoryStyleType>) => {
       return styles.h2;
     case 'h3':
       return styles.h3;
+    case 'h4':
+      return styles.h4;
     case 'label1':
       return styles.label1;
     case 'label2':
@@ -116,6 +119,13 @@ const styles = StyleSheet.create({
     fontFamily: 'AvenirNextLTPro-Bold',
     fontSize: 22,
     fontWeight: '700',
+    color: colors.white,
+  },
+  h4: {
+    fontFamily: 'AvenirNextLTPro-Demi',
+    fontSize: 16,
+    fontWeight: '600',
+    color: colors.white,
   },
   label1: {
     fontFamily: 'AvenirNextLTPro-Demi',

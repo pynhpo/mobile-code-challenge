@@ -1,7 +1,12 @@
 {
   "global": {},
   "infos": {},
-  "warnings": {},
+  "warnings": {
+    "too_short": "Too short!",
+    "too_long": "Too long!",
+    "invalid": "Invalid!",
+    "required": "Required!"
+  },
   "errors": {
     "no_content": "No content!",
     "normal_notice": "Error! Please try later!"
@@ -9,7 +14,10 @@
   "screens": {
     "sign_in": {
       "login_success": "Login successfully",
-      "login_failed": "Login failed"
+      "login_failed": "Login failed",
+      "phone_number": "Phone number",
+      "password": "Password",
+      "sign_in": "Sign in"
     }
   },
   "components": {
