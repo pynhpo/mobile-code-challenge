@@ -1,8 +1,53 @@
 {
   "global": {},
-  "infos": {},
-  "warnings": {},
-  "errors": {},
-  "screens": {},
-  "components": {}
+  "infos": {
+    "success": "Success!"
+  },
+  "warnings": {
+    "too_short": "Too short!",
+    "too_long": "Too long!",
+    "invalid": "Invalid!",
+    "required": "Required!"
+  },
+  "errors": {
+    "no_content": "No content!",
+    "normal_notice": "Error! Please try later!"
+  },
+  "screens": {
+    "sign_in": {
+      "login_success": "Login successfully",
+      "login_failed": "Login failed",
+      "phone_number": "Phone number",
+      "password": "Password",
+      "sign_in": "Sign in"
+    },
+    "debit_card": {
+      "header_title": "Debit Card",
+      "available_balance": "Available balance"
+    },
+    "spending_limit": {
+      "header_title": "Spending limit",
+      "label": "Set a weekly debit card spending limit",
+      "caption": "Here weekly means the last 7 days - not the calendar week",
+      "save": "Save"
+    }
+  },
+  "components": {
+    "main_tab": {
+      "home": "Home",
+      "debit_card": "DebitCard",
+      "payments": "Payments",
+      "credit": "Credit",
+      "profile": "Profile"
+    },
+    "visa_card": {
+      "thru": "Thru",
+      "cvv": "CVV",
+      "hide_card_number": "Hide card number",
+      "show_card_number": "Show card number"
+    },
+    "debit_card_spending_limit_processing_bar": {
+      "label": "Debit card spending limit"
+    }
+  }
 }
