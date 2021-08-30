@@ -94,15 +94,17 @@ export const VisaCard = (props: PropsType): React.ReactElement => {
         activeOpacity={0.9}
         style={styles.toggleCardNumberCover}
         onPress={toggleVisibleCardNumber}>
-        {visibleCardNumber ? <ClosedEyeSvg /> : <OpenedEyeSvg />}
-        <Text
-          numberOfLines={1}
-          category="p4"
-          style={styles.visibleCardNumberText}>
-          {visibleCardNumber
-            ? t<string>('components.visa_card.hide_card_number')
-            : t<string>('components.visa_card.show_card_number')}
-        </Text>
+        <View style={styles.toggleCardNumberBody}>
+          {visibleCardNumber ? <ClosedEyeSvg /> : <OpenedEyeSvg />}
+          <Text
+            numberOfLines={1}
+            category="p4"
+            style={styles.visibleCardNumberText}>
+            {visibleCardNumber
+              ? t<string>('components.visa_card.hide_card_number')
+              : t<string>('components.visa_card.show_card_number')}
+          </Text>
+        </View>
       </TouchableOpacity>
     </View>
   );
@@ -128,6 +130,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     flexDirection: 'row',
     alignItems: 'center',
+    height: 19,
   },
   expireDate: {
     marginRight: 32,
@@ -149,6 +152,10 @@ const styles = StyleSheet.create({
     zIndex: -1,
     borderRadius: 6,
     paddingTop: 8,
+  },
+  toggleCardNumberBody: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   visibleCardNumberText: {
     color: colors.primary,

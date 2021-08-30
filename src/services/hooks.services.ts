@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useCallback } from 'react';
 
 export type ResolverType = {
-  resolver: {
+  resolver?: {
     resolve: (value: unknown) => void;
     reject: (reason: any) => void;
   };

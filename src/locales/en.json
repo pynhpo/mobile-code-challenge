@@ -1,6 +1,8 @@
 {
   "global": {},
-  "infos": {},
+  "infos": {
+    "success": "Success!"
+  },
   "warnings": {
     "too_short": "Too short!",
     "too_long": "Too long!",

@@ -9,13 +9,14 @@ import { NumberService } from '@services/number.service';
 interface PropsType extends ViewProps {
   currentValue: number;
   limit: number;
+  currency: string;
 }
 
 export const DebitCardSpendingLimitProcessingBar = (
   props: PropsType,
 ): React.ReactElement => {
   const { t } = useTranslation();
-  const { currentValue, limit, style, ...restProps } = props;
+  const { currentValue, limit, currency, style, ...restProps } = props;
   const currentPercent = (currentValue * 100) / limit;
   return (
     <View {...restProps} style={style}>
@@ -27,11 +28,11 @@ export const DebitCardSpendingLimitProcessingBar = (
         </Text>
         <View style={styles.ratioCover}>
           <Text category="p1" style={appStyles.primaryText}>
-            {NumberService.formatMoney(currentValue)}
+            {NumberService.formatMoney(currentValue, currency)}
           </Text>
           <View style={styles.gap} />
           <Text style={styles.limitText} category="p1">
-            {NumberService.formatMoney(limit)}
+            {NumberService.formatMoney(limit, currency)}
           </Text>
         </View>
       </View>

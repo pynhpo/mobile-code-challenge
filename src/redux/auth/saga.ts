@@ -1,5 +1,6 @@
 import { UrlConstant } from '@constants/url.constant';
-import { toggleLoadingOverlayModalAction } from '@redux/modal/action';
+import { toggleLoadingOverlayModalAction } from '../modal/action';
+import { getDebitCardInfoAction } from '../debit-card/action';
 import { AppStorage } from '@services/app-storage.service';
 import { SagaService } from '@services/saga.service';
 import {
@@ -18,15 +19,12 @@ import {
   AuthActionType,
   SignInDataType,
 } from './constants';
-import { ResolverType } from '@services/hooks.services';
-import isFunction from 'lodash/isFunction';
 import { CrashlyticsService } from '@services/crashlytics.service';
 import { NavigationService } from '@services/navigation.service';
 import i18n from '@init/i18n';
 import { ToastMessageService } from '@services/toast-message.service';
 
-function* signOutSaga(action: AuthActionType) {
-  // const resolver = action.resolver || {}; // Be careful if u call action without using useDispatchResolve
+function* signOutSaga() {
   try {
     yield put(toggleLoadingOverlayModalAction({ visible: true }));
 
@@ -40,7 +38,6 @@ function* signOutSaga(action: AuthActionType) {
     CrashlyticsService.recordError(err);
   } finally {
     yield put(toggleLoadingOverlayModalAction({ visible: false }));
-    // isFunction(resolver?.resolve) && resolver?.resolve();
   }
 }
 
@@ -90,6 +87,7 @@ function* signInSaga(action: AuthActionType<SignInDataType>) {
       }),
     );
     yield put(toggleLoadingOverlayModalAction({ visible: false }));
+    yield put(getDebitCardInfoAction());
     yield call(NavigationService.reset, 'MainTab');
     ToastMessageService.toastSuccess(i18n.t('screens.sign_in.login_success'));
   } catch (err) {

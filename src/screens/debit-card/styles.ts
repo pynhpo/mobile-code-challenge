@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     height: 300,
     position: 'absolute',
     top: 0,
-    paddingHorizontal: spacing.screenPadding,
     backgroundColor: colors.secondary,
     zIndex: -2,
   },
@@ -21,11 +20,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  headerTitle: {
-    alignItems: 'flex-end',
-  },
   availableBalanceCover: {
     marginTop: 33,
+    paddingHorizontal: spacing.screenPadding,
   },
   availableBalanceValueCover: {
     marginTop: 10,

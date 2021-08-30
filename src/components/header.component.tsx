@@ -6,6 +6,7 @@ import { spacing } from '@theme/spacing';
 import LogoSvg from '@assets/svg/logo.svg';
 import LeftSvg from '@assets/svg/left.svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Text } from './text.component';
 
 const BaseHeader = ({
   style,
@@ -46,6 +47,21 @@ export const BackHeader = ({
         onPress={NavigationService.goBack}>
         <LeftSvg fill={colors.white} width={18} height={18} />
       </TouchableOpacity>
+      <LogoSvg width="25" height="25" />
+    </BaseHeader>
+  );
+};
+
+export const TitleHeader = ({
+  style,
+  title,
+}: {
+  style?: ViewStyle;
+  title: string;
+}): React.ReactElement => {
+  return (
+    <BaseHeader style={style}>
+      <Text category="h1">{title}</Text>
       <LogoSvg width="25" height="25" />
     </BaseHeader>
   );

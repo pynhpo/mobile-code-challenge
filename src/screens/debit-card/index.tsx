@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View, FlatList, ListRenderItem } from 'react-native';
 import { styles } from './styles';
 import { Layout } from '@components/layout.component';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Text } from '@components/text.component';
-import LogoSvg from '@assets/svg/logo.svg';
 import { appStyles } from '@theme/globalStyles';
 import { CurrencyView } from '@components/currency.component';
 import { VisaCard } from '@components/visa-card.component';
@@ -20,42 +18,35 @@ import {
 } from '@components/debit-card-item.component';
 import { DebitCardSpendingLimitProcessingBar } from '@components/debit-card-spending-limit-processing-bar';
 import { NavigationService } from '@services/navigation.service';
-
-const data: DebitCardItemDataType[] = [
-  {
-    key: 'top_up_account',
-    label: 'Top-up account',
-    text: 'Deposit money to your account to use with card',
-  },
-  {
-    key: 'weekly_spending_limit',
-    label: 'Weekly spending limit',
-    text: 'You haven’t set any spending limit on card',
-  },
-  {
-    key: 'freeze_card',
-    label: 'Freeze card',
-    text: 'Your debit card is currently active',
-  },
-  {
-    key: 'get_a_new_card',
-    label: 'Get a new card',
-    text: 'This deactivates your current debit card',
-  },
-  {
-    key: 'deactivated_cards',
-    label: 'Deactivated cards',
-    text: 'Your previously deactivated cards',
-  },
-];
+import { TitleHeader } from '@components/header.component';
+import { FetcherService } from '@services/fetcher.service';
+import { UrlConstant } from '@constants/url.constant';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectDebitCardInfo } from '@redux/debit-card/selector';
+import { toggleWeeklySpendingLimitAction } from '@redux/debit-card/action';
+import { NumberService } from '@services/number.service';
 
 export const DebitCardScreen = (): React.ReactElement => {
   const { t } = useTranslation();
-  const insets = useSafeAreaInsets();
-  const [isOnWeeklySpendingLimit, setIsOnWeeklySpendingLimit] = useState(false);
+  const dispatch = useDispatch();
+  const [debitCardActions, setDebitCardActions] = useState<
+    DebitCardItemDataType[]
+  >([]);
+  const debitCardInfo = useSelector(selectDebitCardInfo);
 
-  const onToggleWeeklySpendingLimit = (isOn: boolean) => {
-    setIsOnWeeklySpendingLimit(isOn);
+  useEffect(() => {
+    FetcherService.fetch('get', UrlConstant.DEBIT_CARD_ACTIONS).then((res) => {
+      setDebitCardActions(res);
+    });
+  }, []);
+
+  const onToggleWeeklySpendingLimit = () => {
+    dispatch(
+      toggleWeeklySpendingLimitAction({
+        isOn: !debitCardInfo.isOnWeeklySpendingLimit,
+        _id: debitCardInfo._id,
+      }),
+    );
   };
 
   const renderItem: ListRenderItem<DebitCardItemDataType> = ({ item }) => {
@@ -72,7 +63,7 @@ export const DebitCardScreen = (): React.ReactElement => {
         return (
           <DebitCardItem
             style={styles.itemsSection}
-            isOn={isOnWeeklySpendingLimit}
+            isOn={debitCardInfo.isOnWeeklySpendingLimit}
             showToggle
             onToggle={onToggleWeeklySpendingLimit}
             onPress={() => {
@@ -116,20 +107,17 @@ export const DebitCardScreen = (): React.ReactElement => {
   return (
     <Layout useSafeAreaView edges={['bottom']} style={styles.container}>
       <View style={styles.banner}>
-        <View style={[styles.header, { marginTop: insets.top }]}>
-          <Text style={styles.headerTitle} category="h1">
-            {t<string>('screens.debit_card.header_title')}
-          </Text>
-          <LogoSvg width="25" height="25" />
-        </View>
+        <TitleHeader title={t<string>('screens.debit_card.header_title')} />
         <View style={styles.availableBalanceCover}>
           <Text style={appStyles.whiteText} category="label2">
             {t<string>('screens.debit_card.available_balance')}
           </Text>
           <View style={styles.availableBalanceValueCover}>
             <CurrencyView style={appStyles.marginRight10} />
-            <Text style={styles.headerTitle} category="h1">
-              {`3,000`}
+            <Text category="h1">
+              {NumberService.formatMoneyWithoutCurrency(
+                debitCardInfo.availableBalance,
+              )}
             </Text>
           </View>
         </View>
@@ -139,23 +127,24 @@ export const DebitCardScreen = (): React.ReactElement => {
         keyExtractor={(item, index) => `${item.key}_${index}`}
         bounces={false}
         showsVerticalScrollIndicator={false}
-        data={[...data, ...data, ...data, ...data, ...data]}
+        data={debitCardActions}
         renderItem={renderItem}
         ListHeaderComponent={
           <View style={styles.listHeader}>
             <VisaCard
               data={{
-                name: 'Mark Henry',
-                cardNumber: '1234567812341234',
-                expireDate: '12/20',
-                cvv: '456',
+                name: debitCardInfo.ownerName,
+                cardNumber: debitCardInfo.cardNumber,
+                expireDate: debitCardInfo.expireDate,
+                cvv: debitCardInfo.cvv,
               }}
               style={styles.visaCard}
             />
-            {isOnWeeklySpendingLimit && (
+            {debitCardInfo.isOnWeeklySpendingLimit && (
               <DebitCardSpendingLimitProcessingBar
-                currentValue={2600}
-                limit={5000}
+                currentValue={debitCardInfo.currentWeeklySpendingValue}
+                limit={debitCardInfo.weeklySpendingLimit}
+                currency={debitCardInfo.currency}
                 style={styles.processingBar}
               />
             )}

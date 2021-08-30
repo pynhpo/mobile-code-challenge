@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   headerCover: {
-    minHeight: 160,
+    minHeight: 190,
     backgroundColor: colors.secondary,
   },
   headerTitle: {
@@ -16,14 +16,15 @@ export const styles = StyleSheet.create({
   bodyCover: {
     backgroundColor: colors.white,
     flex: 1,
-    padding: spacing.screenPadding,
   },
   body: {
     flex: 1,
+    padding: spacing.screenPadding,
   },
   labelCover: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: -18,
   },
   caption: {
     marginTop: 12,
@@ -49,5 +50,14 @@ export const styles = StyleSheet.create({
   saveButton: {
     alignSelf: 'center',
     marginBottom: 16,
+  },
+  whiteGap: {
+    position: 'absolute',
+    top: -24,
+    width: '100%',
+    height: 80,
+    borderRadius: 24,
+    backgroundColor: colors.white,
+    zIndex: -1,
   },
 });

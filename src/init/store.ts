@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { authSaga } from '@redux/auth/saga';
+import { debitCardSaga } from '@redux/debit-card/saga';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
 import { persistReducer, persistStore, PersistConfig } from 'redux-persist';
@@ -27,6 +28,7 @@ const persistedReducer = persistReducer<CombinedStateType>(
 const store = createStore(persistedReducer, initialState, compose(middleware));
 
 Saga.run(authSaga);
+Saga.run(debitCardSaga);
 
 export const persistor = persistStore(store);
 

@@ -79,21 +79,18 @@ const getTextFontWeightStyle = ({
 const getDefaultStyle = ({
   category,
   fontWeight,
-}: Required<CategoryStyleType> & Required<FontWeightStyleType>) => {
+}: Required<CategoryStyleType> & FontWeightStyleType) => {
+  const textFontWeightStyle = fontWeight
+    ? getTextFontWeightStyle({ fontWeight })
+    : {};
   return {
     ...getTextCategoryStyle({ category }),
-    ...getTextFontWeightStyle({ fontWeight }),
+    ...textFontWeightStyle,
   };
 };
 
 export const Text = (props: PropsType): React.ReactElement => {
-  const {
-    children,
-    category = 'p1',
-    fontWeight = 'regular',
-    style,
-    ...restProps
-  } = props;
+  const { children, category = 'p1', fontWeight, style, ...restProps } = props;
   const defaultStyle = getDefaultStyle({ category, fontWeight });
   return (
     <RNText {...restProps} style={[defaultStyle, style]}>

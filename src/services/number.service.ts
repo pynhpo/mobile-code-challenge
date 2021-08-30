@@ -8,8 +8,12 @@ export class NumberService {
     callback();
   }, 600);
 
-  static formatMoney = (data: number | string): string => {
-    return 'S$' + numeral(data).format(NumberService.moneyPattern);
+  static formatMoney = (data: number | string, currency: string): string => {
+    return currency + numeral(data).format(NumberService.moneyPattern);
+  };
+
+  static formatMoneyWithoutCurrency = (data: number | string): string => {
+    return numeral(data).format(NumberService.moneyPattern);
   };
 
   static formatPositiveMoney = (data: number | string): string => {
