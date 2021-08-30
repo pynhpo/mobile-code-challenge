@@ -10,17 +10,18 @@ import { DebitCardSvg } from '@components/svg/debit-card-svg';
 import { PaymentsSvg } from '@components/svg/payments-svg';
 import { CreditSvg } from '@components/svg/credit-svg';
 import { ProfileSvg } from '@components/svg/profile-svg';
+import { DebitCardScreen } from '@screens/debit-card/index';
 
 const BottomTab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+const EmptyComponent = () => <View />;
+
 const DebitCardStackNavigator = (): React.ReactElement => (
   <Stack.Navigator headerMode="none" initialRouteName="DebitCard">
-    <Stack.Screen name="DebitCard" component={EmptyComponent} />
+    <Stack.Screen name="DebitCard" component={DebitCardScreen} />
   </Stack.Navigator>
 );
-
-const EmptyComponent = () => <View />;
 
 export const MainTabNavigator = (): React.ReactElement => {
   const { t } = useTranslation();

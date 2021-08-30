@@ -1,6 +1,10 @@
 import { StyleSheet, ViewStyle, TextStyle, ImageStyle } from 'react-native';
+import { colors } from './colors';
 
 export const rawStyles: Record<string, ViewStyle | TextStyle | ImageStyle> = {
+  marginBottom2: {
+    marginBottom: 2,
+  },
   marginBottom4: {
     marginBottom: 4,
   },
@@ -10,8 +14,14 @@ export const rawStyles: Record<string, ViewStyle | TextStyle | ImageStyle> = {
   marginRight4: {
     marginRight: 4,
   },
+  marginRight10: {
+    marginRight: 10,
+  },
   marginBottom16: {
     marginBottom: 16,
+  },
+  marginBottom24: {
+    marginBottom: 24,
   },
   marginY8: {
     marginVertical: 8,
@@ -31,6 +41,9 @@ export const rawStyles: Record<string, ViewStyle | TextStyle | ImageStyle> = {
   flex1: {
     flex: 1,
   },
+  flexDirectionRow: {
+    flexDirection: 'row',
+  },
   textLineThrough: {
     textDecorationLine: 'line-through',
   },
@@ -39,6 +52,12 @@ export const rawStyles: Record<string, ViewStyle | TextStyle | ImageStyle> = {
   },
   centerTextAlign: {
     textAlign: 'center',
+  },
+  whiteText: {
+    color: colors.white,
+  },
+  primaryText: {
+    color: colors.primary,
   },
 };
 

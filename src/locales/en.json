@@ -18,6 +18,10 @@
       "phone_number": "Phone number",
       "password": "Password",
       "sign_in": "Sign in"
+    },
+    "debit_card": {
+      "header_title": "Debit Card",
+      "available_balance": "Available balance"
     }
   },
   "components": {
@@ -27,6 +31,15 @@
       "payments": "Payments",
       "credit": "Credit",
       "profile": "Profile"
+    },
+    "visa_card": {
+      "thru": "Thru",
+      "cvv": "CVV",
+      "hide_card_number": "Hide card number",
+      "show_card_number": "Show card number"
+    },
+    "debit_card_spending_limit_processing_bar": {
+      "label": "Debit card spending limit"
     }
   }
 }

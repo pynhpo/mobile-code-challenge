@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { TextInput as RNTextInput, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { styles } from './styles';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Controller, useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { getSignInSchema } from '@constants/validation-schema.constant';
@@ -14,6 +13,7 @@ import { TextInput } from '@components/text-input.component';
 import { ProfileSvg } from '@components/svg/profile-svg';
 import { HomeSvg } from '@components/svg/home-svg';
 import { Button } from '@components/button.component';
+import { Layout } from '@components/layout.component';
 
 type FormValues = {
   phone: string;
@@ -35,7 +35,7 @@ export const SignInScreen = (): React.ReactElement => {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <Layout useSafeAreaView style={styles.safeArea}>
       <KeyboardAvoidingScrollView>
         <View style={styles.headerContainer}>
           <LogoSvg />
@@ -82,13 +82,11 @@ export const SignInScreen = (): React.ReactElement => {
             name="password"
             defaultValue="123456"
           />
-          <Button
-            style={styles.signInButton}
-            onPress={() => handleSubmit(onSubmit)}>
+          <Button style={styles.signInButton} onPress={handleSubmit(onSubmit)}>
             {t<string>('screens.sign_in.sign_in')}
           </Button>
         </View>
       </KeyboardAvoidingScrollView>
-    </SafeAreaView>
+    </Layout>
   );
 };

@@ -11,6 +11,11 @@ export const colors = {
   white: 'white',
   transparent: 'transparent',
   lightBlue: 'lightblue',
-  lightGreen: 'lightgreen',
+  lightGreen: '#E5FAF0',
   inputTextColor: '#222222',
+  layoutLevel1: '#FFFFFF',
+  layoutLevel2: '#EEEEEE',
+  defaultLabel1: '#FFFFFF',
+  defaultLabel2: '#25345F',
+  pTextColor: '#222222',
 };

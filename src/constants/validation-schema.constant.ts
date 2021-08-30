@@ -7,12 +7,12 @@ export const getSignInSchema = (t: TFunction): yup.AnyObjectSchema =>
   yup.object().shape({
     phone: yup
       .string()
+      .required(t<string>('warnings.required'))
       .min(8, t<string>('warnings.too_short'))
       .max(16, t<string>('warnings.too_long'))
-      .matches(phoneRegExp, t<string>('warnings.invalid'))
-      .required(t<string>('warnings.required')),
+      .matches(phoneRegExp, t<string>('warnings.invalid')),
     password: yup
       .string()
-      .min(6, t<string>('warnings.too_short'))
-      .required(t<string>('warnings.required')),
+      .required(t<string>('warnings.required'))
+      .min(6, t<string>('warnings.too_short')),
   });

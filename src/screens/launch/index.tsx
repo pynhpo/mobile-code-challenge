@@ -18,8 +18,8 @@ export const LaunchScreen = (): React.ReactElement => {
           await NavigationService.reset('MainTab');
         } else {
           RNBootSplash.hide({ fade: true });
-          // await NavigationService.reset('MainTab');
-          await NavigationService.reset('SignIn');
+          await NavigationService.reset('MainTab');
+          // await NavigationService.reset('SignIn');
         }
       })
       .catch(async () => {

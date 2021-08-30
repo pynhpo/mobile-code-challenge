@@ -7,8 +7,6 @@ import {
   ViewStyle,
 } from 'react-native';
 
-// const windowHeight = Dimensions.get('window').height;
-
 export interface KeyboardAwareScrollViewProps extends ViewProps {
   bounces?: boolean;
   children: React.ReactNode;
@@ -44,13 +42,3 @@ export const KeyboardAvoidingScrollView = (
     </KeyboardAvoidingView>
   );
 };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     minHeight:
-//       Platform.OS === 'ios'
-//         ? windowHeight
-//         : windowHeight - StatusBar.currentHeight,
-//   },
-// });

@@ -131,31 +131,37 @@ const styles = StyleSheet.create({
     fontFamily: 'AvenirNextLTPro-Demi',
     fontSize: 14,
     fontWeight: '600',
+    color: colors.defaultLabel1,
   },
   label2: {
     fontFamily: 'AvenirNextLTPro-Medium',
     fontSize: 14,
     fontWeight: '500',
+    color: colors.defaultLabel2,
   },
   p1: {
     fontFamily: 'AvenirNextLTPro-Demi',
     fontSize: 13,
     fontWeight: '600',
+    color: colors.pTextColor,
   },
   p2: {
     fontFamily: 'AvenirNextLTPro-Regular',
     fontSize: 13,
     fontWeight: '400',
+    color: colors.pTextColor,
   },
   p3: {
     fontFamily: 'AvenirNextLTPro-Bold',
     fontSize: 12,
     fontWeight: '700',
+    color: colors.pTextColor,
   },
   p4: {
     fontFamily: 'AvenirNextLTPro-Demi',
     fontSize: 12,
     fontWeight: '600',
+    color: colors.pTextColor,
   },
   c1: {
     fontFamily: 'AvenirNextLTPro-Demi',

@@ -51,6 +51,7 @@ const Input = (
     containerStyle,
     onBlur,
     onFocus,
+    error,
     ...restProps
   } = props;
   const [focused, setFocused] = useState(!!restProps.autoFocus);
@@ -70,15 +71,17 @@ const Input = (
   );
   const defaultStyle = getDefaultStyle(size);
   const focusedStyle = getOnFocusStyle(focused);
+  const errorStyle = error ? styles.error : undefined;
   return (
-    <View style={[styles.container, containerStyle]}>
+    <View style={[styles.container, containerStyle, focusedStyle, errorStyle]}>
       {leftComponent ? (
         <View style={styles.leftComponentCover}>{leftComponent}</View>
       ) : null}
       <RNTextInput
         {...restProps}
         ref={ref}
-        style={[defaultStyle, focusedStyle, style]}
+        placeholderTextColor={colors.gray}
+        style={[defaultStyle, style]}
         onBlur={onCustomBlur}
         onFocus={onCustomFocus}
       />
@@ -104,6 +107,9 @@ const styles = StyleSheet.create({
   },
   leftComponentCover: {
     marginRight: 10,
+  },
+  error: {
+    borderBottomColor: colors.red,
   },
   focused: {
     borderBottomColor: colors.primary,
