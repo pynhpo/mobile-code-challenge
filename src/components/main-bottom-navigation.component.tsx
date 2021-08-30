@@ -12,6 +12,11 @@ export const MainBottomNavigation = ({
 }: BottomTabBarProps): React.ReactElement => {
   const onPress = useCallback(
     (route, isFocused) => {
+      // Prevent access other screens but DebitCard
+      if (route.name !== 'DebitCard') {
+        return;
+      }
+
       const event = navigation.emit({
         type: 'tabPress',
         target: route.key,
@@ -68,6 +73,11 @@ export const MainBottomNavigation = ({
 const styles = StyleSheet.create({
   safeView: {
     backgroundColor: colors.white,
+    shadowColor: colors.black,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.8,
+    shadowRadius: 10,
+    elevation: 8,
   },
   bottomTabContainer: {
     flexDirection: 'row',

@@ -22,6 +22,12 @@
     "debit_card": {
       "header_title": "Debit Card",
       "available_balance": "Available balance"
+    },
+    "spending_limit": {
+      "header_title": "Spending limit",
+      "label": "Set a weekly debit card spending limit",
+      "caption": "Here weekly means the last 7 days - not the calendar week",
+      "save": "Save"
     }
   },
   "components": {

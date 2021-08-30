@@ -46,7 +46,7 @@ const Input = (
 ): React.ReactElement => {
   const {
     leftComponent,
-    size = 'small',
+    size = 'medium',
     style,
     containerStyle,
     onBlur,
@@ -121,18 +121,21 @@ const styles = StyleSheet.create({
     fontFamily: 'AvenirNextLTPro-Regular',
     fontSize: 13,
     fontWeight: '400',
+    height: 50,
     ...sharedStyles.textInput,
   },
   medium: {
     fontFamily: 'AvenirNextLTPro-Medium',
     fontSize: 18,
     fontWeight: '500',
+    height: 50,
     ...sharedStyles.textInput,
   },
   large: {
     fontFamily: 'AvenirNextLTPro-Bold',
     fontSize: 24,
     fontWeight: '700',
+    height: 50,
     ...sharedStyles.textInput,
   },
 });

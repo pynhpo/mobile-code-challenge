@@ -19,6 +19,7 @@ import {
   DebitCardItem,
 } from '@components/debit-card-item.component';
 import { DebitCardSpendingLimitProcessingBar } from '@components/debit-card-spending-limit-processing-bar';
+import { NavigationService } from '@services/navigation.service';
 
 const data: DebitCardItemDataType[] = [
   {
@@ -74,6 +75,9 @@ export const DebitCardScreen = (): React.ReactElement => {
             isOn={isOnWeeklySpendingLimit}
             showToggle
             onToggle={onToggleWeeklySpendingLimit}
+            onPress={() => {
+              NavigationService.navigate('SpendingLimit');
+            }}
             icon={<SpendingLimitSvg />}
             item={item}
           />

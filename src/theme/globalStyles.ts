@@ -17,6 +17,9 @@ export const rawStyles: Record<string, ViewStyle | TextStyle | ImageStyle> = {
   marginRight10: {
     marginRight: 10,
   },
+  marginLeft12: {
+    marginLeft: 12,
+  },
   marginBottom16: {
     marginBottom: 16,
   },

@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { spacing } from '@theme/spacing';
 
 export const styles = StyleSheet.create({
   safeArea: {
@@ -11,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   formContainer: {
     flex: 1,
-    paddingHorizontal: 24,
+    paddingHorizontal: spacing.screenPadding,
   },
   signInButton: {
     alignSelf: 'center',

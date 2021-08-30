@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { LaunchScreen } from '@screens/launch/index';
 import { SignInScreen } from '@screens/sign-in/index';
+import { SpendingLimitScreen } from '@screens/spending-limit/index';
 import { MainTabNavigator } from './main-tab.navigator';
 import React from 'react';
 
@@ -11,5 +12,6 @@ export const RootStackNavigator = (): React.ReactElement => (
     <Stack.Screen name="Launch" component={LaunchScreen} />
     <Stack.Screen name="MainTab" component={MainTabNavigator} />
     <Stack.Screen name="SignIn" component={SignInScreen} />
+    <Stack.Screen name="SpendingLimit" component={SpendingLimitScreen} />
   </Stack.Navigator>
 );
